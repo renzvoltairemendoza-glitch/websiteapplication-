@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renz Voltaire Mendoza - Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f0ff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
+        header {
+            background: #4b287e;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h2 {
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #e2c8ff;
+        }
+
+        /* HOME */
+        .home {
+            background: linear-gradient(135deg, #a45de0, #53318c);
+            color: white;
+            text-align: center;
+            padding: 75px 20px;
+        }
+
+        .profile {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .home h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .home p {
+            font-size: 18px;
+        }
+
+        .home button {
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: white;
+            color: #53318c;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .home button:hover {
+            background: #e7d7ff;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 55px 8%;
+            scroll-margin-top: 20px;
+        }
+
+        section h2 {
+            color: #60399a;
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: white;
+            max-width: 950px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        /* PERSONAL INFORMATION */
+        .personal p {
+            margin: 12px 0;
+            font-size: 17px;
+        }
+
+        .personal b {
+            color: #60399a;
+        }
+
+        /* EDUCATION */
+        .education-item {
+            border-left: 5px solid #8652c5;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            background: #f8f3ff;
+            border-radius: 8px;
+        }
+
+        .education-item h3 {
+            color: #60399a;
+        }
+
+        /* SKILLS */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .skill {
+            background: #eadcf8;
+            color: #60399a;
+            padding: 13px 22px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        /* FAVORITES */
+        .favorites {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .favorite {
+            background: #f0e5ff;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .favorite span {
+            display: block;
+            font-size: 35px;
+        }
+
+        /* PROJECT */
+        .project h3 {
+            color: #60399a;
+            margin-bottom: 12px;
+        }
+
+        .project p {
+            margin-bottom: 20px;
+        }
+
+        pre {
+            background: #21152d;
+            color: #f5eaff;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        /* CONTACT */
+        .contact p {
+            margin: 12px 0;
+        }
+
+        .contact a {
+            color: #60399a;
+            text-decoration: none;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #4b287e;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media(max-width: 600px) {
+            header {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .home h1 {
+                font-size: 27px;
+            }
+
+            section {
+                padding: 40px 5%;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <header>
+        <h2>RENZ.</h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#personal">Personal</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#favorites">Favorites</a>
+            <a href="#projects">Java Code</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HOME SECTION -->
+    <div class="home" id="home">
+
+        <h1>Renz Voltaire C. Mendoza</h1>
+
+        <p>@Renz</p>
+
+        <p>Bachelor of Science in Information Technology</p>
+
+        <p>Welcome to My Personal Portfolio!</p>
+
+        <button onclick="location.href='#personal'">
+            Explore My Portfolio
+        </button>
+
+    </div>
+
+    <!-- PERSONAL INFORMATION -->
+    <section id="personal">
+
+        <h2>Personal Information</h2>
+
+        <div class="card personal">
+
+            <p><b>Full Name:</b> Renz Voltaire C. Mendoza</p>
+
+            <p><b>Username:</b> @Renz</p>
+
+            <p><b>Course:</b> Bachelor of Science in Information Technology</p>
+
+            <p><b>School:</b> Our Lady of the Sacred Heart College of Guimba, Inc.</p>
+
+            <p><b>Department:</b> BS Information Technology</p>
+
+            <p><b>Course Codes:</b> CC101 and CC102</p>
+
+            <p><b>Introduction:</b> I am a college student who loves learning new things. I believe in myself and always try my best. My dream is to finish my studies and achieve my goals.</p>
+
+        </div>
+    </section>
+
+    <!-- EDUCATIONAL BACKGROUND -->
+    <section id="education">
+
+        <h2>Educational Background</h2>
+
+        <div class="card">
+
+            <div class="education-item">
+                <h3>College</h3>
+                <p>Our Lady of the Sacred Heart College of Guimba, Inc. (OLSHCO)</p>
+                <p>Bachelor of Science in Information Technology (BSIT)</p>
+                <p>Department of BS Information Technology</p>
+            </div>
+
+            <div class="education-item">
+                <h3>Academic Subjects</h3>
+                <p>CC101 - Introduction to Computing</p>
+                <p>CC102 - Introduction to Computer Programming</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+
+        <h2>My Skills</h2>
+
+        <div class="card">
+
+            <div class="skills">
+                <span class="skill">Java Programming</span>
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">Problem Solving</span>
+                <span class="skill">Basic Debugging</span>
+                <span class="skill">Computer Skills</span>
+                <span class="skill">Teamwork</span>
+                <span class="skill">Creativity</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAVORITES -->
+    <section id="favorites">
+
+        <h2>My Favorites</h2>
+
+        <div class="favorites">
+
+            <div class="favorite">
+                <span>🎵</span>
+                Music
+            </div>
+
+            <div class="favorite">
+                <span>🏸</span>
+                Badminton
+            </div>
+
+            <div class="favorite">
+                <span>💜</span>
+                Purple
+            </div>
+
+        </div>
+    </section>
+
+    <!-- JAVA PROJECT -->
+    <section id="projects">
+
+        <h2>Java Programming Project</h2>
+
+        <div class="card project">
+
+            <h3>GUESS THE NUMBER GAME</h3>
+
+            <p>
+                Guess the Number is a Java game where the
+                player tries to find the secret number
+                randomly selected by the computer.
+                It has three difficulty levels: Easy,
+                Medium, and Hard. The game gives hints
+                whether the guess is too high or too low.
+                The player also has limited attempts.
+            </p>
+
+            <h3>Java Source Code</h3>
+
+<pre><code>import java.util.Scanner;
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        Random random = new Random();
+
+        String playAgain;
+
+        System.out.println("==================================");
+        System.out.println("        GUESS THE NUMBER!");
+        System.out.println("==================================");
+        System.out.println("Find the secret number!");
+
+        do {
+            int maxNumber;
+            int maxAttempts;
+
+            // Select difficulty
+            System.out.println("\nSELECT DIFFICULTY");
+            System.out.println("[1] Easy   (1-10) - 5 attempts");
+            System.out.println("[2] Medium (1-20) - 7 attempts");
+            System.out.println("[3] Hard   (1-50) - 10 attempts");
+            System.out.print("Choose level: ");
+
+            int level = input.nextInt();
+
+            if (level == 1) {
+                maxNumber = 10;
+                maxAttempts = 5;
+            }
+            else if (level == 2) {
+                maxNumber = 20;
+                maxAttempts = 7;
+            }
+            else if (level == 3) {
+                maxNumber = 50;
+                maxAttempts = 10;
+            }
+            else {
+                System.out.println("Invalid level!");
+                System.out.println("Defaulting to Easy.");
+                maxNumber = 10;
+                maxAttempts = 5;
+            }
+
+            // Generate random secret number
+            int secretNumber = random.nextInt(maxNumber) + 1;
+
+            int attempts = 0;
+            boolean found = false;
+
+            System.out.println("\nA secret number is hiding!");
+            System.out.println("Guess a number from 1 to " + maxNumber);
+            System.out.println("You have " + maxAttempts + " attempts.");
+
+            // Guessing process
+            while (attempts < maxAttempts) {
+
+                System.out.print("\nEnter your guess: ");
+                int guess = input.nextInt();
+
+                if (guess < 1 || guess > maxNumber) {
+                    System.out.println("Invalid guess!");
+                    System.out.println("Choose between 1 and " + maxNumber);
+                    continue;
+                }
+
+                attempts++;
+
+                if (guess == secretNumber) {
+                    System.out.println("\nCORRECT!");
+                    System.out.println("Congratulations! You win!");
+                    System.out.println("Attempts used: " + attempts);
+                    found = true;
+                    break;
+                }
+                else if (guess < secretNumber) {
+                    System.out.println("Too low! Try HIGHER!");
+                }
+                else {
+                    System.out.println("Too high! Try LOWER!");
+                }
+
+                System.out.println("Attempts remaining: "
+                        + (maxAttempts - attempts));
+            }
+
+            // Game over
+            if (!found) {
+                System.out.println("\nGAME OVER!");
+                System.out.println("The secret number was: " + secretNumber);
+            }
+
+            // Play again
+            System.out.print("\nDo you want to play again? (yes/no): ");
+            playAgain = input.next();
+
+        } while (playAgain.equalsIgnoreCase("yes"));
+
+        System.out.println("\n==================================");
+        System.out.println("       THANK YOU FOR PLAYING!");
+        System.out.println("==================================");
+
+        input.close();
+    }
+}</code></pre>
+
+        </div>
+    </section>
+
+    <!-- CONTACT INFORMATION -->
+    <section id="contact">
+
+        <h2>Contact Information</h2>
+
+        <div class="card contact">
+
+            <p>
+                <b>Email:</b>
+                <a href="mailto:renzvoltairemendoza@gmail.com">
+                    renzvoltairemendoza@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <b>Phone:</b>
+                <a href="tel:09948796724">09948796724</a>
+            </p>
+
+            <p><b>GitHub:</b> Add your public GitHub repository link here.</p>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>BUILD DREAMS. CODE FUTURES.</h3>
+
+        <p>Ex Fide, Ad Futurum</p>
+
+        <p>© 2026 Renz Voltaire C. Mendoza</p>
+
+    </footer>
+
+</body>
+</html>
